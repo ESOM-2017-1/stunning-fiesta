@@ -12,9 +12,42 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<astah.version>7.0.0</astah.version>
+		<astahPath>C:/Program Files/astah-professional</astahPath>
 	</properties>
-
+	
+	<build>
+		<sourceDirectory>src/main/java</sourceDirectory>
+		<testSourceDirectory>src/test/java</testSourceDirectory>
+		<outputDirectory>target/classes</outputDirectory>
+		<testOutputDirectory>target/test-classes</testOutputDirectory>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+			</resource>
+		</resources>
+		<testResources>
+			<testResource>
+				<directory>src/test/resources</directory>
+			</testResource>
+		</testResources>
+	</build>
+	
 	<dependencies>
+		<dependency>
+			<groupId>com.change_vision.astah</groupId>
+			<artifactId>astah-api</artifactId>
+			<version>${astah.version}</version>
+			<scope>system</scope>
+			<systemPath>${astahPath}/astah-api.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>com.change_vision.astah</groupId>
+			<artifactId>astah-pro</artifactId>
+			<version>${astah.version}</version>
+			<scope>system</scope>
+			<systemPath>${astahPath}/astah-pro.jar</systemPath>
+		</dependency>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
