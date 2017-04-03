@@ -7,6 +7,7 @@
 		<plugin.install>true</plugin.install>
 		<astah.version>1.0</astah.version>
 		<astah.edition>pro,uml,com,sysml,gsn</astah.edition>
+		<astahPath>/usr/lib/astah_professional/</astahPath>
 	</properties>
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.change_vision.astah.extension.plugin</groupId>
