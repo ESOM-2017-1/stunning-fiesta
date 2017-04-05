@@ -1,0 +1,5 @@
+language: java
+env:
+  global:
+    - SKIP_IMAGE_CHECK=1
+script: mvn test -f ./astah-script-plugin/pom.xml
