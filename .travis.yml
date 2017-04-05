@@ -3,5 +3,8 @@ env:
   global:
     - SKIP_IMAGE_CHECK=1
 before_install:
+- sudo apt-key adv --keyserver pgp.nic.ad.jp --recv-keys C22BD678
+- sudo echo "deb http://members.change-vision.com/repos/apt/ astah main" >> /etc/apt/sources.list
+- sudo apt-get update
 - sudo apt-get install astah-community
 script: mvn test -f ./astah-script-plugin/pom.xml
