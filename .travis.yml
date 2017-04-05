@@ -3,5 +3,5 @@ env:
   global:
     - SKIP_IMAGE_CHECK=1
 before_install:
-- apt-get install astah-community
+- sudo apt-get install astah-community
 script: mvn test -f ./astah-script-plugin/pom.xml
