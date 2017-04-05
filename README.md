@@ -1,5 +1,5 @@
 # stunning-fiesta
-Módulo dinâmico para realização de casos de uso no Astah.
+Módulo dinâmico para realização de casos de uso no Astah. 
 
 # Wiki
 https://github.com/ESOM-2017-1/stunning-fiesta/wiki
