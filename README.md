@@ -1,10 +1,10 @@
 # stunning-fiesta
 Módulo dinâmico para realização de casos de uso no Astah.
 
-# wiki
+# Wiki
 https://github.com/ESOM-2017-1/stunning-fiesta/wiki
 
-# trello
+# Trello
 https://trello.com/b/ylrF4B9J/stunning-fiesta
 
 # Travis
