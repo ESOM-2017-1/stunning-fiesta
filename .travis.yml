@@ -5,6 +5,6 @@ env:
 before_install:
 - sudo apt-key adv --keyserver pgp.nic.ad.jp --recv-keys C22BD678
 - echo "deb http://members.change-vision.com/repos/apt/ astah main" | sudo tee -a /etc/apt/sources.list
-- sudo apt-get update
+- sudo apt-get update -qq
 - sudo apt-get install astah-community -y
 script: mvn test -f ./astah-script-plugin/pom.xml
