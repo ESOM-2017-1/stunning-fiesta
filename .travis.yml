@@ -1,10 +1,9 @@
-language: java
+language: objective-c  # Do tests on OS X
 env:
   global:
     - SKIP_IMAGE_CHECK=1
 before_install:
-- sudo apt-key adv --keyserver pgp.nic.ad.jp --recv-keys C22BD678
-- echo "deb http://members.change-vision.com/repos/apt/ astah main" | sudo tee -a /etc/apt/sources.list
-- sudo apt-get update -qq
-- sudo apt-get install astah-community -y
+  - brew update
+  - brew cask install java
+  - brew cask install astah-community
 script: mvn test -f ./astah-script-plugin/pom.xml
