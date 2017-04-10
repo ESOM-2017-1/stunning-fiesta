@@ -6,4 +6,4 @@ before_install:
   - brew update
   - brew cask install java
   - brew cask install astah-community
-script: mvn test -f -PCommunity ./astah-script-plugin/pom.xml
+script: mvn test -PCommunity -f  ./astah-script-plugin/pom.xml
