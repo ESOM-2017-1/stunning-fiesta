@@ -40,8 +40,10 @@ public class TemplateAction implements IPluginActionDelegate {
 	}
 	
 	private String validate(IModel iCurrentProject) {
-		List<IClass> classList = new ArrayList<IClass>();
-		getAllClasses(iCurrentProject, classList);
+		List <IClass> actorList = new ArrayList<>();
+		getActors(iProject,actorList);
+         	 JOptionPane.showMessageDialog(window.getParent(), 
+	            		"Model contains " + actorList.size() + " actors.");
 		StringBuffer error = new StringBuffer();
 		boolean hasError = false;
 		for (IClass cl : classList) {
@@ -56,6 +58,19 @@ public class TemplateAction implements IPluginActionDelegate {
 			return error.toString();
 		else
 			return null;
+	}
+	
+	public void getActors(IElement element,List<IClass> classes )
+	{
+		if (element instanceof IPackage)
+			for(IElement inPkg : ((IPackage) element).getOwnedElements())
+				getActors(inPkg,classes);
+		else if(element instanceof IClass && element.hasStereotype("actor"))
+		{
+			classes.add((IClass)element);
+			for(IClass nested : ((IClass) element).getNestedClasses())
+				getActors(nested,classes);
+		}
 	}
 
 	private void getAllClasses(INamedElement element, List<IClass> classList) {
