@@ -7,6 +7,7 @@ public class Activator implements BundleActivator {
     private ScriptBundleCollector scriptBundleCollector;
 
     public void start(BundleContext context) {
+		System.out.println("Hello World");
         scriptBundleCollector = new ScriptBundleCollector(context);
         scriptBundleCollector.startCollecting();
         ScriptViewContext.bundleContext = context;
