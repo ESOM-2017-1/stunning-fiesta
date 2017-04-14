@@ -11,7 +11,7 @@ https://trello.com/b/ylrF4B9J/stunning-fiesta
 [![Build Status](https://travis-ci.org/ESOM-2017-1/stunning-fiesta.svg?branch=master)](https://travis-ci.org/ESOM-2017-1/stunning-fiesta)
 
 
-#How to install
+# How to install
 
 Follow these steps:
 1. Download jar file from https://github.com/ESOM-2017-1/stunning-fiesta/releases.
